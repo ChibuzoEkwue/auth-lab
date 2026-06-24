@@ -8,9 +8,13 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Auth Lab",
+  title: {
+    template: "%s | Auth Lab",
+    default: "Auth Lab", // a default is required when creating a template
+  },
   description: "Learning about better-auth",
 };
+
 
 export default function RootLayout({
   children,
@@ -22,7 +26,7 @@ export default function RootLayout({
       lang="en"
       className={`${nunitoSans.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col ">{children}</body>
     </html>
   );
 }

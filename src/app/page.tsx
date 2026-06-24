@@ -1,9 +1,13 @@
-import React from 'react'
+import { redirect } from 'next/navigation';
+
 
 const HomePage = () => {
-  return (
-    <div>HomePage</div>
-  )
+  redirect("/auth/sign-in");
+  // return (
+  //   <div>
+  //     <h1>Payout Threshold</h1>
+  //   </div>
+  // );
 }
 
 export default HomePage
